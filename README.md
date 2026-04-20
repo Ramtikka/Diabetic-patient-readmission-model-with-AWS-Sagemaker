@@ -79,7 +79,6 @@ Input files:
 - IDS_mapping.csv
 ```
 
-![Dataset Upload](screenshots/dataset-upload.png)
 
 ---
 
@@ -90,7 +89,6 @@ A new Data Wrangler flow was created to prepare and analyze the dataset.
 Data flow name: DiabeticData
 ```
 
-![Data Flow](screenshots/data-flow.png)
 
 ---
 
@@ -103,7 +101,6 @@ This helped in:
 - spotting possible data quality issues,
 - and preparing for downstream visual analysis.
 
-![Data Types and Distributions](screenshots/data-types-distributions.png)
 
 ---
 
@@ -140,7 +137,6 @@ These relationships suggest that:
 - longer stays were associated with more medication use,
 - and older patients tended to have more diagnoses recorded.
 
-![Feature Correlation Pre-Transformation](screenshots/feature-correlation-pre.png)
 
 ---
 
@@ -214,7 +210,6 @@ The following columns were removed:
 
 These were dropped based on the capstone workflow and post-analysis reasoning, with the goal of reducing noise and simplifying the feature space.
 
-![Drop Columns Step](screenshots/drop-columns.png)
 
 ---
 
@@ -231,7 +226,6 @@ Output style: Columns
 
 This made the categorical data more suitable for machine learning models.
 
-![One Hot Encoding Step](screenshots/one-hot-encoding.png)
 
 ---
 
@@ -241,7 +235,6 @@ After transformation, I exported the processed data to a **SageMaker dataset** a
 
 > This is different from the original transcript, which used S3 export.
 
-![Export to SageMaker Dataset](screenshots/export-dataset.png)
 
 ---
 
@@ -258,7 +251,6 @@ Sampling method: Random
 Approximate sample size: 20000
 ```
 
-![Sampling Step](screenshots/sampling-step.png)
 
 ---
 
@@ -332,7 +324,7 @@ Build type: Quick build
 ```
 
 ### Model Performance
-- **Accuracy:** ~61.088%
+- **Accuracy:** ~60.667%
 
 ### Interpretation
 The model was able to predict the correct readmission category about 61% of the time. This was acceptable for a quick low-code capstone workflow and showed the value of the preprocessing and analysis stages.
@@ -372,23 +364,8 @@ This allowed the identification of patients who were more likely to be readmitte
 .
 ├── README.md
 ├── screenshots/
-│   ├── dataset-upload.png
-│   ├── data-flow.png
-│   ├── data-types-distributions.png
-│   ├── feature-correlation-pre.png
-│   ├── quick-model-pre.png
-│   ├── target-leakage-pre.png
-│   ├── drop-columns.png
-│   ├── one-hot-encoding.png
-│   ├── export-dataset.png
-│   ├── sampling-step.png
-│   ├── feature-correlation-post.png
-│   ├── quick-model-post.png
-│   ├── target-leakage-post.png
-│   ├── custom-model-build.png
-│   └── batch-prediction.png
 └── docs/
-    └── project-notes.md
+
 ```
 
 ---
